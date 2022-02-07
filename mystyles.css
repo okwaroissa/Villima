@@ -29,3 +29,7 @@ body{
 .bg-villima-nav{
     background-color: rgb(20, 105, 172);
 }
+.about-section{
+    margin-bottom:20px;
+    background-color: gainsboro;
+}
