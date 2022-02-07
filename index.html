@@ -10,21 +10,21 @@
     <link rel="stylesheet" href="mystyles.css">
     <title>Villima Inc</title>
   </head>
-  <body>
+  <body onload="ActivateHomePage()">
     <section id="navbar">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-light bg-villima-nav">
+        <div class="container-fluid w-75 m-auto">
           <a class="navbar-brand" href="#">Villima Inc</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-              <a class="nav-link" href="#">About Us</a>
-              <a class="nav-link" href="#">Programs</a>
-              <a class="nav-link" href="">Team</a>
-              <a class="nav-link" href="">Contact Us</a>
+              <a id="homelink" class="nav-link active" aria-current="page" href="#" onclick="Showsection(this.id)">Home</a>
+              <a id="aboutlink" class="nav-link" href="#" onclick="Showsection(this.id)">About Us</a>
+              <a id="programslink" class="nav-link" href="#" onclick="Showsection(this.id)">Programs</a>
+              <a id="teamlink" class="nav-link" href="#" onclick="Showsection(this.id)">Team</a>
+              <a id="contactlink" class="nav-link" href="#" onclick="Showsection(this.id)">Contact Us</a>
             </div>
           </div>
         </div>
@@ -32,17 +32,36 @@
     </section>
     <div class="vert-space"></div>
 
-    <section id="content">
-      <div>
-        This is the content section....
+    <section id="content" class="w-75 m-auto">
+      <div id="home">
+        This is the Home section....
+      </div>
+      <div id="about">
+        <div id="mission" class="">
+          <h3 class="section-header">Our Mission</h2>
+          To Build Back Better forgotten poor communities and to bring them at par with modern standard of living.
+        </div>
+        <div id="vision" class="">
+          <h3 class="section-header">Our Vision</h2>
+          To be the trusted leader in fighting poverty among the forgotten poor communities.
+        </div>
+        <div id="values" class="">
+          <h3 class="section-header">Our Core Values</h2>
+        </div>
+      </div>
+      <div id="programs">
+        This is the Programs section....
+      </div>
+      <div id="team">
+        This is the Team section....
+      </div>
+      <div id="contact">
+        This is the Contact Us section....
       </div>
     </section>
     <div class="vert-space"></div>
     <section class="footer bg-dark">
       <div class="container">
-        <div class="text-center lower-div-border">
-          &copy;Villima Inc
-        </div>
         <div id="Address">
           <h3>Address</h3>
           <p>5408 Taylor Street<br>
@@ -54,6 +73,28 @@
       
     </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="myscript.js"></script>
+    <script>
+      let activesection = "home";
+      let sections = ["home", "about", "team", "programs", "contact"];
+
+      function Hidesections(){
+          for(let i = 0; i < sections.length; i++){
+              let section = document.getElementById(sections[i]);
+              section.style.display = "none";
+          }
+      }
+
+      function Showsection(id){
+        Hidesections();
+        let sectionid = id.substring(0, id.length-4);
+        let section = document.getElementById(sectionid);
+        section.style.display = "block";
+      };
+
+      function ActivateHomePage(){
+        Hidesections();
+        document.getElementById("home").style.display = "block";
+      };
+    </script>
   </body>
 </html>
