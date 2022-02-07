@@ -1,17 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
 html, body{
     width:100%;
     margin:0;
     padding:0;
 }
 body{
-    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    font-family:'Lato', 'Russo One', 'Prompt', 'Libre Baskerville'; 
 }
 .navbar{
     padding-top:20px;
     padding-bottom:20px;
 }
+.navbar, footer{
+    font-size: 1.3rem;
+}
 .section-header{
-    color: rgb(46, 80, 119)
+    color: rgb(46, 80, 119);
+    font-weight: bold;
 }
 .footer{
     height:150px;
@@ -31,5 +37,4 @@ body{
 }
 .about-section{
     margin-bottom:20px;
-    background-color: gainsboro;
 }
