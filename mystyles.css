@@ -3,6 +3,23 @@ html, body{
     margin:0;
     padding:0;
 }
+.navbar{
+    padding-top:20px;
+    padding-bottom:20px;
+}
 .section-header{
     color: rgb(46, 80, 119)
+}
+.footer{
+    height:150px;
+    color:white;
+}
+.lower-div-border{
+    border-bottom: 2px solid white;
+}
+.vert-space{
+    height:5px;
+    margin-top:2px;
+    margin-bottom:2px;
+    background-color: rgb(46,80,119);
 }
