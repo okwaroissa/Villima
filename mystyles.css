@@ -36,7 +36,7 @@ body{
 .bg-villima-nav{
     background-color: rgb(20, 105, 172);
 }
-.about-section, .program-section{
+.about-section, .program-section, .home-section{
     margin-bottom:20px;
 }
 .program-area{
