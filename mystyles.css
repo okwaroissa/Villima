@@ -9,8 +9,8 @@ body{
     font-family:'Lato', 'Russo One', 'Prompt', 'Libre Baskerville'; 
 }
 .navbar{
-    padding-top:20px;
-    padding-bottom:20px;
+    padding-top:15px;
+    padding-bottom:15px;
 }
 .navbar, footer{
     font-size: 1.3rem;
@@ -21,7 +21,7 @@ body{
     border-bottom: 1px solid gray;
 }
 .footer{
-    height:150px;
+    height:115px;
     color:white;
 }
 .lower-div-border{
@@ -42,3 +42,16 @@ body{
 .program-area{
     margin:15px 0 15px 0;
 }
+#social{
+    border-top:2px solid white;
+    padding:5px 0 5px 0;
+}
+
+#social div{
+    width:40px;
+    height:40px;
+}
+.social-icon{
+    padding:0;
+}
+
